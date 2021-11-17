@@ -17,11 +17,39 @@ public class CircuitBreaker {
 
 	public String tryToChangeStatus() {
 		if(this.counter > 3) {
-			this.status = "close";
+			this.setStatus("close");
+			this.setCounter(counter++);
 		}else {
-			this.status = "open";
+			this.setStatus("open");
+			this.setCounter(counter++);
 		}
-		return this.status;
+		return this.getStatus();
 	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+
+	public Integer getCounter() {
+		return counter;
+	}
+
+
+
+	public void setCounter(Integer counter) {
+		this.counter = counter;
+	}
+	
+	
 
 }

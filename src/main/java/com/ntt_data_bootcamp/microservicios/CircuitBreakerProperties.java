@@ -2,7 +2,7 @@ package com.ntt_data_bootcamp.microservicios;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("cb")
+@ConfigurationProperties(prefix="cb")
 public class CircuitBreakerProperties {
 	
 	private Integer counter = 0;

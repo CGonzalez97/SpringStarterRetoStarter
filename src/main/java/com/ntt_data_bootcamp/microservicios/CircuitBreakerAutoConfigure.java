@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConditionalOnClass(CircuitBreaker.class)
 @EnableConfigurationProperties(CircuitBreakerProperties.class)
-public class CircuitBreakerAutoConfigure {
+public class CircuitBreakerAutoconfigure {
 	
 	private final CircuitBreakerProperties properties;
 	
-	public CircuitBreakerAutoConfigure(CircuitBreakerProperties properties) {
+	public CircuitBreakerAutoconfigure(CircuitBreakerProperties properties) {
 		this.properties= properties;
 	}
 	
